@@ -9,5 +9,5 @@ public class JavaBrainsCourseApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JavaBrainsCourseApiApplication.class, args);
 	}
-
+//just for git
 }
