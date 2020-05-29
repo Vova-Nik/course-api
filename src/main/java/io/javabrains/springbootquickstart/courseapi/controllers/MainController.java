@@ -15,4 +15,9 @@ public class MainController {
         return "home";
     }
 
+    @GetMapping("/about")
+    public String greeting(Model model) {
+        model.addAttribute("title", "About CourseApi");
+        return "home";
+    }
 }

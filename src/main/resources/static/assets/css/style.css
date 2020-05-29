@@ -6,6 +6,40 @@
     background-color: burlywood;
 }
 
+.my-row{
+    min-height: 100px;
+}
+
+.logo{
+    color: brown;
+}
+
+.header{
+    margin: 40px 0;
+    background-color: bisque;
+    /*line-height: 40px;*/
+    /*border: 1px solid black;*/
+    padding: 10px 20px;
+}
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.link{
+    padding: 0 20px;
+    color: brown;
+}
+
+.link:hover{
+    text-decoration: none;
+    color: darkred;
+    /*color: black;*/
+    /*font-weight: bold;*/
+    text-shadow: 2px 2px 2px #CE5937;
+}
+
 .reddy{
     background-color: coral;
 }
