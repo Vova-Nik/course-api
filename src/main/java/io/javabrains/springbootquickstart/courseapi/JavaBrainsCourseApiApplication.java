@@ -11,7 +11,7 @@ public class JavaBrainsCourseApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(JavaBrainsCourseApiApplication.class, args);
-		System.out.println("JavaBrainsCourseApiApplication");
+		System.out.println("VVV JavaBrainsCourseApiApplication");
 		//ApplicationContext context = new AnnotationConfigApplicationContext("io.javabrains.springbootquickstart.courseapi.service");
 
 	}

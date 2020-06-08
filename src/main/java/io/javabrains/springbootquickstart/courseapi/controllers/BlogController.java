@@ -4,23 +4,21 @@ import io.javabrains.springbootquickstart.courseapi.models.Post;
 import io.javabrains.springbootquickstart.courseapi.repo.PostRepository;
 import io.javabrains.springbootquickstart.courseapi.service.InsertToHtml;
 
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class BlogController {
-    @Autowired
-    private PostRepository postRepository;
-    private ApplicationContext appContext;
-//    private TransferService transferService;
 
-//    private InsertToHtml insertToHtml;
+    @Autowired private PostRepository postRepository;
+    @Autowired private InsertToHtml insertToHtml;
 
+
+    @Autowired private ApplicationContext ctx;
+    private ApplicationContext  appContext;
 
     @GetMapping("/blog-main")
     public String blogMain(Model model) {
@@ -41,13 +39,12 @@ public class BlogController {
     @GetMapping("/admin")
     public String admin(Model model) {
 
-
-
         System.out.println("JavaBrainsCourseApiApplication Cat in controller");
         System.out.println("appContext = " +  appContext);
+        System.out.println("appContext ctx = " +  ctx);
+        System.out.println("insertToHtml  = " +  insertToHtml);
 
-        //showBean();
-        //insertToHtml.tick();
+        insertToHtml.tick();
         return "blog-main";
     }
 

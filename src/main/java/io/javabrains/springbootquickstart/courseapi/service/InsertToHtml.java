@@ -44,7 +44,7 @@ public class InsertToHtml {
         System.out.println(header);
         //body = doInsert(bdp);
     }
-   // @Autowired
+
     public void tick(){
         System.out.println("tick in InsertToHtml");
         System.out.println("tick.Counter = " + counter);
