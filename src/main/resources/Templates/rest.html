@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    <link rel="stylesheet" href="./static/assets/css/style.css">-->
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css"/>
+
+    <title>index</title>
+</head>
+<body>
+<header th:insert="bloks/header :: header"></header>
+<h1>Its REST page</h1>
+<div class="img">
+    <img src="https://commons.bmstu.wiki/images/f/f7/Rest_api.jpg" alt="REST API">
+</div>
+<div class="buttons-area">
+
+    <div><button type="button" class="rest-btn btn-get-all"> Disp all tasks </button></div>
+    <div><button type="button" class="rest-btn btn-create"> Create new task </button></div>
+    <div><button type="button" class="rest-btn btn-display-by-id"> Display task by id </button></div>
+    <div><button type="button" class="rest-btn btn-update-by-id"> Update task by id </button></div>
+    <div><button type="button" class="rest-btn btn-delete"> Delete task by id </button></div>
+</div>
+<div class="for_script">
+
+</div>
+
+<script src="/assets/js/script.js"></script>
+</body>
+</html>

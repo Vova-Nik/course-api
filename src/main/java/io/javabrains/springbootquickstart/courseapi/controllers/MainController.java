@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 @Controller
 public class MainController {
 
-    @GetMapping("/ccc")
+    @GetMapping("/")
     public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
         model.addAttribute("title", "CourseApi");
         return "home";
@@ -29,19 +29,4 @@ public class MainController {
         System.out.println("MainController simple mapping +++++++++++++++++");
         return "index";
     }
-//    @GetMapping("/style.css")
-//    public String css(Model model) {
-//
-//        System.out.println("MainController simple mapping CSS+++++++++++++++++");
-//        return "style.css";
-//    }
-
-//    @GetMapping("/style.css")
-//    public String style(Model model) {
-//
-//        System.out.println("MainController CSS  +++++++++++++++++");
-//        return src\\main\\resources\\static\\assets\\css\\style.css;
-//
-//    }
-
 }

@@ -1,19 +1,25 @@
 package io.javabrains.springbootquickstart.courseapi.controllers;
 
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 import java.util.TreeMap;
 
-@RestController
+@Controller
 
 @RequestMapping(value="/rest")
-public class RstController {
 
+
+public class RstController {
+//    String source = @Value()
+   @Value("${vova.inet-source}")
+   private String message;
    private Map<String, String> notes = new TreeMap();
     private JSONObject jo;
    public RstController(){
@@ -30,13 +36,14 @@ public class RstController {
 
    }
 
+   //Mapping http://localhost:8081/rest/
     @GetMapping("/")
 
     public String greeting(Model model) {
         System.out.println("Rest Controller.There is no Id.");
         model.addAttribute("title", "About CourseApi");
         System.out.println("RstController simple mapping ______________________________________________");
-        return "<h1>REST home psge</h1> ";
+        return "rest";
     }
 
     @GetMapping("/{id}")
@@ -51,7 +58,7 @@ public class RstController {
     //@PostMapping("")
     @RequestMapping(value="", method=RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
-
+    @ResponseBody
     //public String create(@RequestBody Map<String,String> allParams) {
 
     public ResponseEntity<String> readData(@RequestBody String allParams) {
@@ -60,7 +67,7 @@ public class RstController {
         System.out.println("Rest Controller Post mapping");
         System.out.println("allParams = " + allParams);
         if(allParams.contains("read"))
-          System.out.println("read request hb got");
+          System.out.println("read request hb got. " + message );
 
         JSONObject json = new JSONObject(notes);
         System.out.printf( "JSON: %s", json.toString(2) );

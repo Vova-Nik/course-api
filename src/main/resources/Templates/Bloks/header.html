@@ -2,16 +2,17 @@
 <div th:fragment="header">
     <div class="container">
         <div class="row header">
-            <p class="col-6">
+            <p class="col-12">
                 <h1 class="logo">It's a title</h1>
-                <p th:text="'Hello, ' + ${title} + '!'"/></p>
+
             </div>
+        <p th:text="'Hello, ' + ${title} + '!'"/></p>
 
             <div class="col-6 nav">
                 <a class="link" href="/">Home</a>
                 <a class="link" href="/blog-main">Blog</a>
                 <a class="link" href="/blog/add">Add post</a>
-                <a class="link" href="#">page3</a>
+                <a class="link" href="http://localhost:8081/rest/">REST page</a>
                 <a class="link" href="/about">About</a>
             </div>
         </div>
